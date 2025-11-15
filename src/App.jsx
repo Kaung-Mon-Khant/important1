@@ -21,8 +21,8 @@ const images = [
   "/images/Saint01.jpg", "/images/Saint02.jpg", "/images/Saint03.jpg", "/images/Saint04.jpg", 
   "/images/Saint05.jpg", "/images/Saint06.jpg", "/images/Saint07.jpg", "/images/Saint08.jpg", 
   null,  "/images/Saint10.jpg", "/images/Saint11.jpg", "/images/Saint12.jpg", 
-  "/images/Saint13.jpg", "/images/Saint14.jpg", "/images/Saint15.jpg", "/images/Saint16.jpg", 
-  "/images/Saint18.jpg","/images/Saint19.jpg"
+  "/images/Saint13.jpg", "/images/Saint14.jpg", "/images/Saint15.jpg", "/images/Saint16.jpg", "/images/Saint17.jpg",
+  "/images/Saint18.jpg"
 ];
 
 const videos = [
