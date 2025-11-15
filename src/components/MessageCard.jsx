@@ -34,16 +34,14 @@ function MessageCard({ messages = [], image, video }) {
         <video 
           src={video} 
           style={{
-            maxHeight: '50vh',    // responsive
+            maxHeight: '50vh',   
             width: '100%',
             objectFit: 'contain',
             borderRadius: '1.5rem',
             marginBottom: '1rem'
           }}
           controls
-          autoPlay
-          loop
-          muted
+          
         />
       )}
 
