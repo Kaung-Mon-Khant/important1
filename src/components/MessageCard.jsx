@@ -3,15 +3,15 @@ import React from 'react';
 function MessageCard({ messages = [], image, video }) {
   return (
     <div style={{
-      minHeight: '800px',        // keeps the card tall enough
-      maxHeight: '1000px',        // prevents it from growing too tall
+      minHeight: '50vh',          // 50% of viewport height
+      maxHeight: '90vh',          // max 90% of viewport height
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      justifyContent: 'center',  // center content vertically
-      padding: '2rem',
+      justifyContent: 'center',
+      padding: '1.5rem',
       borderRadius: '2rem',
-      width: '100%',
+      width: '90%',
       maxWidth: '800px',
       background: 'rgba(255,255,255,0.2)',
       boxSizing: 'border-box',
@@ -20,23 +20,39 @@ function MessageCard({ messages = [], image, video }) {
         <img 
           src={image} 
           alt="sweet" 
-          style={{ maxHeight: '600px',objectFit: 'contain', width: '100%', borderRadius: '1.5rem', marginBottom: '1rem' }}
+          style={{
+            maxHeight: '50vh',    // responsive to viewport
+            width: '100%',
+            objectFit: 'contain',
+            borderRadius: '1.5rem',
+            marginBottom: '1rem'
+          }}
         />
       )}
 
       {video && (
         <video 
           src={video} 
-          style={{ maxHeight: '600px', objectFit: 'contain', width: '100%', borderRadius: '1.5rem', marginBottom: '1rem' }}
+          style={{
+            maxHeight: '50vh',    // responsive
+            width: '100%',
+            objectFit: 'contain',
+            borderRadius: '1.5rem',
+            marginBottom: '1rem'
+          }}
           controls
           autoPlay
           loop
-          
+          muted
         />
       )}
 
       {messages.map((msg, i) => (
-        <p key={i} style={{ fontSize: 'clamp(1.6rem, 3vw, 1rem)', textAlign: 'center', margin: '0.5rem 0' }}>
+        <p key={i} style={{
+          fontSize: 'clamp(1rem, 2.5vw, 1.5rem)', 
+          textAlign: 'center', 
+          margin: '0.5rem 0'
+        }}>
           {msg}
         </p>
       ))}

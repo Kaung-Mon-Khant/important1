@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import MessageCard from './components/MessageCard.jsx';
 import emailjs from '@emailjs/browser';
 
-// Messages + corresponding images/videos
 const messages = [
   "I saw this and thought of you 💭",
   "A little smile for your day 😊",
@@ -19,11 +18,11 @@ const messages = [
 ];
 
 const images = [
- "/images/Saint01.jpg", "/images/Saint02.jpg", "/images/Saint03.jpg", "/images/Saint04.jpg", 
- "/images/Saint05.jpg", "/images/Saint06.jpg", "/images/Saint07.jpg", "/images/Saint08.jpg", 
- null,  "/images/Saint10.jpg", "/images/Saint11.jpg", "/images/Saint12.jpg", 
- "/images/Saint13.jpg", "/images/Saint14.jpg", "/images/Saint15.jpg", "/images/Saint16.jpg", 
- "/images/Saint18.jpg","/images/Saint19.jpg", "/images/Saint17.jpg", , // final image
+  "/images/Saint01.jpg", "/images/Saint02.jpg", "/images/Saint03.jpg", "/images/Saint04.jpg", 
+  "/images/Saint05.jpg", "/images/Saint06.jpg", "/images/Saint07.jpg", "/images/Saint08.jpg", 
+  null,  "/images/Saint10.jpg", "/images/Saint11.jpg", "/images/Saint12.jpg", 
+  "/images/Saint13.jpg", "/images/Saint14.jpg", "/images/Saint15.jpg", "/images/Saint16.jpg", 
+  "/images/Saint18.jpg","/images/Saint19.jpg"
 ];
 
 const videos = [
@@ -99,10 +98,10 @@ function App() {
       flexDirection: 'column',
       alignItems: 'center'
     }}>
-      {/* Show final slide with image and I LOVE U caption */}
+      {/* Final slide */}
       {finalSlide ? (
         <MessageCard 
-          image="/images/Saint17.jpg"
+          image="/images/Saint19.jpg"
           messages={["I LOVE U 💖"]}
         />
       ) : (
@@ -114,7 +113,6 @@ function App() {
       )}
 
       <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginTop: '2rem', flexWrap: 'wrap' }}>
-        {/* Back button */}
         {!finalSlide && index > 0 && index < lastIndex && (
           <button
             onClick={handleBack}
@@ -133,7 +131,6 @@ function App() {
           </button>
         )}
 
-        {/* Next button */}
         {!finalSlide && index < lastIndex && (
           <button
             onClick={handleNext}
@@ -152,7 +149,6 @@ function App() {
           </button>
         )}
 
-        {/* Yes/No buttons only on last slide */}
         {!finalSlide && index === lastIndex && (
           <>
             <button
@@ -179,7 +175,7 @@ function App() {
                 borderRadius: '1rem',
                 border: 'none',
                 cursor: 'pointer',
-                backgroundColor: 'blue',
+                backgroundColor: 'red',
                 color: 'white',
                 fontWeight: 'bold'
               }}
